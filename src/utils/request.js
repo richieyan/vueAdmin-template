@@ -18,7 +18,7 @@ service.interceptors.request.use(config => {
 }, error => {
   // Do something with request error
   console.log(error) // for debug
-  Promise.reject(error)
+  return Promise.reject(error) // need return
 })
 
 // respone拦截器
